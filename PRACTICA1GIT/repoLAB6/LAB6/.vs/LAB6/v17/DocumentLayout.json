@@ -1,0 +1,141 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Carlos\\source\\repos\\LAB6\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\class2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\frminventarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\frminventarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\frminventarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\frminventarioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\frmgestionlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\frmgestionlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\frmgestionlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\frmgestionlibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|c:\\users\\carlos\\source\\repos\\lab6\\lab6\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8CD2FCD-B1D8-4D1F-93DE-2E129F95F4FB}|LAB6\\LAB6.csproj|solutionrelative:lab6\\class3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmGestionLibro.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmGestionLibro.cs",
+              "RelativeDocumentMoniker": "LAB6\\FrmGestionLibro.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmGestionLibro.cs",
+              "RelativeToolTip": "LAB6\\FrmGestionLibro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T01:28:33.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmGestionLibro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmGestionLibro.cs",
+              "RelativeDocumentMoniker": "LAB6\\FrmGestionLibro.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmGestionLibro.cs [Dise\u00F1o]",
+              "RelativeToolTip": "LAB6\\FrmGestionLibro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T01:27:00.977Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmInventarioPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmInventarioPrincipal.cs",
+              "RelativeDocumentMoniker": "LAB6\\FrmInventarioPrincipal.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmInventarioPrincipal.cs",
+              "RelativeToolTip": "LAB6\\FrmInventarioPrincipal.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T01:05:08.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmInventarioPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmInventarioPrincipal.cs",
+              "RelativeDocumentMoniker": "LAB6\\FrmInventarioPrincipal.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\FrmInventarioPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "LAB6\\FrmInventarioPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:48:41.449Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Class2.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class2.cs",
+              "RelativeDocumentMoniker": "LAB6\\Class2.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class2.cs",
+              "RelativeToolTip": "LAB6\\Class2.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:50:14.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class1.cs",
+              "RelativeDocumentMoniker": "LAB6\\Class1.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class1.cs",
+              "RelativeToolTip": "LAB6\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:49:16.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Class3.cs",
+              "DocumentMoniker": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class3.cs",
+              "RelativeDocumentMoniker": "LAB6\\Class3.cs",
+              "ToolTip": "C:\\Users\\Carlos\\source\\repos\\LAB6\\LAB6\\Class3.cs",
+              "RelativeToolTip": "LAB6\\Class3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T00:51:15.366Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
