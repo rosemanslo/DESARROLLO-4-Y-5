@@ -1,0 +1,325 @@
+/* Definición de variables de color */
+:root {
+    --color-principal: #f38f4a; /* Naranja UTP */
+    --color-fondo: #f5f5f5;
+    --color-texto-oscuro: #333;
+    --color-simulacion: #5bc0de;
+    --color-cancelar: #d9534f;
+    /* Colores del Login para el Header y las Tarjetas */
+    --color-login-start: #ffb79b; /* Rosado claro */
+    --color-login-end: #f38f4a; /* Naranja UTP */
+    --color-header-bg: #444; /* Fondo oscuro sutil */
+    --color-card-fondo: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-oscuro);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- 1. HEADER DINÁMICO (Cambio Solicitado) --- */
+header {
+    /* Fondo con degradado sutil */
+    background: linear-gradient(100deg, var(--color-header-bg) 0%, #000000 100%); 
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgb(255, 115, 0);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    /* Efecto de texto con sombra suave */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s;
+}
+
+.btn-logout {
+    background: none;
+    border: 1px solid var(--color-login-start); /* Borde rosado suave */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: var(--color-login-start);
+    border-color: white;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Card Principal (donde está el progreso) */
+.pedido-activo-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 40px;
+    overflow: visible; 
+}
+
+/* --- CÍRCULO DE PROGRESO (TAMAÑO AUMENTADO) --- */
+
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    margin-top: 20px; 
+    overflow: hidden; 
+}
+
+.progress-circle {
+    position: relative;
+    width: 220px; /* Tamaño grande */
+    height: 220px;
+}
+
+.progress-svg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.progress-circle circle:first-child {
+    stroke-width: 6; 
+    stroke: #f0f0f0; 
+}
+
+.progress-bar {
+    stroke-width: 6; 
+    transition: stroke-dashoffset 0.8s cubic-bezier(0.25, 1, 0.5, 1), stroke 0.4s ease; 
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--color-texto-oscuro);
+}
+
+.progress-text i {
+    font-size: 3em; 
+    margin-bottom: 8px;
+    transition: color 0.4s ease;
+}
+
+.progress-text p {
+    margin: 0;
+    font-size: 1.1em; 
+    font-weight: 600; 
+    text-transform: uppercase;
+}
+
+/* --- Botones de Acción --- */
+/* (Se mantienen los estilos anteriores) */
+
+.acciones-pedido {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-simulacion {
+    background-color: var(--color-simulacion);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: opacity 0.3s;
+}
+
+.btn-cancelar {
+    background-color: var(--color-cancelar);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.btn-simulacion:hover, .btn-cancelar:hover {
+    opacity: 0.9;
+}
+
+
+/* ==================================== */
+/* 2. CATÁLOGO Y FLIP CARDS CON DEGRADADO */
+/* ==================================== */
+
+.catalogo h2 {
+    color: var(--color-principal);
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.grid-catalogo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 25px;
+    perspective: 1000px; 
+}
+
+/* Contenedor principal para el fade-in */
+.card-producto-container {
+    height: 400px; 
+    opacity: 0; /* Inicialmente oculto para el fade-in */
+    transition: opacity 0.5s;
+}
+
+/* La tarjeta que rota (FLIP CARD) */
+.card-producto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra más fuerte */
+    border-radius: 10px;
+}
+
+/* Clase que activa el volteo */
+.card-producto.is-flipped {
+    transform: rotateY(180deg);
+}
+
+/* Las dos caras */
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+    border-radius: 10px;
+    padding: 21px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Estilo para el header de la tarjeta (Rosado/Naranja) */
+.card-header-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24%; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* Degradado idéntico al del Login (Calqueo) */
+    background: linear-gradient(135deg, var(--color-login-start) 0%, var(--color-login-end) 100%);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+/* Cara Frontal (Contenido) */
+.card-face-front {
+    background-color: var(--color-card-fondo);
+}
+
+.card-face-front .content {
+    position: relative;
+    z-index: 2;
+    margin-top: 15%; 
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-face-front h3 {
+    color: white; 
+    font-size: 1.3em;
+    position: absolute; /* Colocado sobre el degradado */
+    top: -45px;
+}
+
+.card-face-front img {
+    max-height: 120px;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Cara Trasera (Descripción) */
+.card-face-back {
+    background-color: var(--color-login-start); 
+    color: var(--color-texto-oscuro);
+    transform: rotateY(180deg);
+    justify-content: center;
+}
+
+.card-face-back h3 {
+    color: var(--color-texto-oscuro);
+    margin-bottom: 15px;
+}
+
+.card-face-back p {
+    text-align: center;
+    padding: 0 10px;
+    font-size: 1em;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+}
+
+
+/* --- Botones --- */
+
+.card-producto .precio {
+    font-weight: bold;
+    color: var(--color-principal);
+    font-size: 1.6em;
+    display: block;
+    margin: 5px 0 10px 0;
+}
+
+.btn-agregar, .btn-detalle {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    margin-top: 5px;
+    width: 90%;
+}
+
+.btn-detalle {
+    background-color: #555; /* Botón de detalle más neutro */
+}
+
+.btn-agregar:hover {
+    background-color: #e67e3a; 
+}
+
+.btn-detalle:hover {
+    background-color: #777;
+}

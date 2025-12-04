@@ -1,0 +1,44 @@
+/* Estilos pre-preparados para los componentes */
+/* Formularios */
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+/* Inputs */
+.input {
+	width: 250px;
+	padding: 2px;
+}
+
+/* Label */
+.label {
+	margin-bottom: 2px;
+}
+
+/* Label pero con asterisco rojo */
+.label.required::after {
+	content: " *";
+	color: red;
+	font-weight: bold;
+}
+
+/* Navegadores */
+.nav {
+	padding: 1rem;
+	background-color: #11c7b5;
+	backdrop-filter: blur(12px);
+	border-radius: 16px;
+	border: 1px solid;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+	display: flex;
+	gap: 14px;
+}
+
+/* Botones */
+button:hover {
+	background-color: #444;
+	color: white;
+	cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cliente | La Parada UTP</title>
+		<link rel="stylesheet" href="/CSS/Cliente.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+	</head>
+	<body>
+		<header>
+			<h1>La Parada UTP</h1>
+			<button id="logoutBtn" class="btn-logout"><i class="fas fa-arrow-right-from-bracket"></i> Cerrar Sesión</button>
+		</header>
+
+		<main>
+			<h1>¡Hola, °usuario°! ¿Qué vas a pedir hoy?</h1>
+
+			<section class="pedido-activo-card">
+				<div class="header-pedido">
+					<h2>Estado de tu último pedido (<span id="pedidoId">#1023</span>)</h2>
+				</div>
+
+				<div class="detalle-pedido">
+					<ul id="listaItemsPedido">
+						<li>Hamburguesa Clásica x1</li>
+						<li>Papas Fritas Grandes x1</li>
+						<li>Agua Embotellada x1</li>
+					</ul>
+
+					<div class="progress-container">
+						<div class="progress-circle" data-progress="0">
+							<svg class="progress-svg" width="100%" viewBox="0 0 100 100">
+								<circle cx="50" cy="50" r="45" fill="none" stroke="#f0f0f0" stroke-width="6"></circle>
+								<circle
+									class="progress-bar"
+									cx="50"
+									cy="50"
+									r="45"
+									fill="none"
+									stroke="#f38f4a"
+									stroke-width="6"
+									stroke-linecap="round"
+									stroke-dashoffset="282.6"
+									stroke-dasharray="282.6"></circle>
+							</svg>
+							<div class="progress-text">
+								<i class="fas fa-hourglass-half"></i>
+								<p id="pedidoStatusText">Pendiente</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="acciones-pedido">
+					<button id="simularAvanceBtn" class="btn-simulacion">Simular Avance de Pedido (Prueba)</button>
+					<button id="cancelarPedidoBtn" class="btn-cancelar">Cancelar Pedido</button>
+				</div>
+			</section>
+
+		<script src="/JScripts/Cliente.js"></script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+[
+    {
+        "ID_Producto": 1,
+        "Nombre_Prod": "Cerdito",
+        "Descripcion_Prod": "Emparedado de cerdo y queso",
+        "Precio_Prod": "3.00",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 2,
+        "Nombre_Prod": "Nicolleta",
+        "Descripcion_Prod": "Dulce",
+        "Precio_Prod": "4.50",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 3,
+        "Nombre_Prod": "Soda CocaCola",
+        "Descripcion_Prod": "Soda CocaCola...",
+        "Precio_Prod": "0.00",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 4,
+        "Nombre_Prod": "Soda Kist Fresa",
+        "Descripcion_Prod": "Soda de fresa...",
+        "Precio_Prod": "0.00",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 5,
+        "Nombre_Prod": "Soda Kist Naranja",
+        "Descripcion_Prod": "Soda de Naranja...",
+        "Precio_Prod": "0.00",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 6,
+        "Nombre_Prod": "prueba",
+        "Descripcion_Prod": "abcdefg",
+        "Precio_Prod": "0.00",
+        "Dispo_Prod": true
+    },
+    {
+        "ID_Producto": 7,
+        "Nombre_Prod": "Hamburguesa Clasica",
+        "Descripcion_Prod": "Hamburguesa de toda la vida",
+        "Precio_Prod": "0.00",
+        "Dispo_Prod": true
+    }
+]

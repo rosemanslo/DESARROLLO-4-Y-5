@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>LogIn</title>
+		<link rel="stylesheet" href="/CSS/LogIn.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+	</head>
+
+	<body>
+		<div class="contenedor" id="container">
+			<!-- SIGN IN -->
+			<div class="contenedor-formulario registro">
+				<form id="SignIn">
+					<h1>Crear Cuenta</h1>
+
+					<div class="iconos-sociales">
+						<a href="https://www.instagram.com/laparadautp?igsh=YnAyZGY0cG5hbmQy"><img src="/Img/instagram.svg" alt="Instagram" /></a>
+						<a href="#"><img src="/Img/tiktok.svg" alt="Tiktok" /></a>
+					</div>
+
+					<span>Texto random...</span>
+
+					<input id="nameSI" type="text" placeholder="Nombre" />
+					<input id="mailSI" type="email" placeholder="Correo UTP" />
+
+					<div class="input-wrapper">
+						<input id="passwSI" type="password" placeholder="Contraseña" />
+						<button type="button" class="PWBtn" id="togglePwSI">👁</button>
+					</div>
+
+					<div class="input-wrapper">
+						<input id="cPasswSI" type="password" placeholder="Confirme su Contraseña" />
+						<button type="button" class="PWBtn" id="toggleCPwSI">👁</button>
+					</div>
+
+					<button id="SignInBTN">Crear Cuenta</button>
+				</form>
+			</div>
+
+			<!-- LOGIN -->
+			<div class="contenedor-formulario inicio-sesion">
+				<form id="LogIn">
+					<h1>Iniciar Sesión</h1>
+
+					<div class="iconos-sociales">
+						<a href="https://www.instagram.com/laparadautp?igsh=YnAyZGY0cG5hbmQy"><img src="/Img/instagram.svg" alt="Instagram" /></a>
+						<a href="#"><img src="/Img/tiktok.svg" alt="Tiktok" /></a>
+					</div>
+
+					<span>Coloque sus datos</span>
+
+					<input id="mailLI" type="email" placeholder="Correo UTP" />
+
+					<div class="input-wrapper">
+						<input id="passwLI" type="password" placeholder="Contraseña" />
+						<button type="button" class="PWBtn" id="togglePwLI">👁</button>
+					</div>
+
+					<a href="#">¿Olvido su contraseña?</a>
+
+					<button id="LogInBTN">Iniciar Sesión</button>
+				</form>
+			</div>
+
+			<!-- ANIMACIÓN DEL TOGGLE -->
+			<div class="contenedor-toggle">
+				<div class="toggle">
+					<div class="panel-toggle panel-derecha">
+						<h1>¡Bienvenido a la Parada UTP App!</h1>
+						<p>Comida Gourmet, precio UTP</p>
+						<button class="oculto" id="register">No tengo una cuenta</button>
+					</div>
+
+					<div class="panel-toggle panel-izquierda">
+						<h1>¡Bienvenido a la Parada UTP App!</h1>
+						<p>¡Registrese y disfrute de nuestro delicioso menú!</p>
+						<button class="oculto" id="login">Entrar a mi cuenta</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="anime/lib/anime.min.js"></script>
+		<script src="/JScripts/LogIn.js"></script>
+	</body>
+</html>

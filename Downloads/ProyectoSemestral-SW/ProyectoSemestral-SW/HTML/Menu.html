@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/Menu.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<title>Menú</title>
+	</head>
+	<body>
+		<!-- Barra de navegación -->
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-links">
+					<a href="ClientePedidos.html">Pedidos</a>
+					<a href="#">Cuenta</a>
+					<a href="/HTML/Carrito.html" class="active">
+						🛒 Carrito
+						<span id="contador-carrito" class="cart-counter">0</span>
+					</a>
+				</div>
+				<div class="search-container">
+					<input type="text" class="search-bar" placeholder="Buscar productos..." />
+					<button class="search-btn">Buscar</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Contenido principal -->
+		<main>
+			<h1>Listado de productos</h1>
+			<ul id="lista">
+				<!-- Los productos se cargarán aquí con JavaScript -->
+			</ul>
+		</main>
+
+		<script src="/JScripts/Menu.js"></script>
+	</body>
+</html>

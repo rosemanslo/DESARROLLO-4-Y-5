@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Administrador de Pedidos | La Parada</title>
+		<link rel="stylesheet" href="/CSS/AdminPedidos.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	</head>
+	<body>
+		<aside class="sidebar">
+			<div class="sidebar-header">
+				<span class="logo-icon material-symbols-rounded">restaurant</span>
+				<span class="logo-text">La Parada</span>
+			</div>
+
+			<nav class="nav">
+				<a href="/HTML/admin_pedidos.html" class="link active">
+					<span class="link-icon material-symbols-rounded">dashboard</span>
+					<span class="link-title">Panel</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">list_alt</span>
+					<span class="link-title">Pedidos</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">restaurant_menu</span>
+					<span class="link-title">Menú</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">inventory</span>
+					<span class="link-title">Inventario</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">groups</span>
+					<span class="link-title">Usuarios</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">bar_chart</span>
+					<span class="link-title">Reportes</span>
+				</a>
+				<a href="#" class="link">
+					<span class="link-icon material-symbols-rounded">settings</span>
+					<span class="link-title">Configuración</span>
+				</a>
+			</nav>
+
+			<div class="sidebar-footer">
+				<div class="user-info">
+					<div class="user-avatar">
+						<span class="material-symbols-rounded">account_circle</span>
+					</div>
+					<div class="user-details">
+						<span class="user-name">Administrador</span>
+						<span class="user-role">Admin</span>
+					</div>
+				</div>
+				<a href="/HTML/LogIn.html" class="link logout">
+					<span class="link-icon material-symbols-rounded">logout</span>
+					<span class="link-title">Cerrar Sesión</span>
+				</a>
+			</div>
+		</aside>
+
+		<main class="main-content">
+			<div class="content-header">
+				<div class="header-info">
+					<h1>Panel de Control de Pedidos</h1>
+					<p class="welcome-text">Bienvenido al panel de administración</p>
+				</div>
+				<div class="header-actions">
+					<button class="btn-primary">
+						<span class="material-symbols-rounded">add</span>
+						Nuevo Pedido
+					</button>
+				</div>
+			</div>
+
+			<section class="dashboard-cards">
+				<div class="card">
+					<div class="card-header">
+						<span class="card-icon material-symbols-rounded">pending_actions</span>
+						<h2>Pedidos Pendientes</h2>
+					</div>
+					<p class="count" id="count-pendiente">0</p>
+					<span class="trend positive">+2 hoy</span>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<span class="card-icon material-symbols-rounded">schedule</span>
+						<h2>En Preparación</h2>
+					</div>
+					<p class="count" id="count-preparacion">0</p>
+					<span class="trend">En proceso</span>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<span class="card-icon material-symbols-rounded">check_circle</span>
+						<h2>Listos / Entregados</h2>
+					</div>
+					<p class="count" id="count-listo">0</p>
+					<span class="trend positive">+5 hoy</span>
+				</div>
+				<div class="card">
+					<div class="card-header">
+						<span class="card-icon material-symbols-rounded">receipt</span>
+						<h2>Total Hoy</h2>
+					</div>
+					<p class="count">$125.50</p>
+					<span class="trend positive">+15%</span>
+				</div>
+			</section>
+
+			<section class="section">
+				<div class="section-header">
+					<h2>Pedidos Activos</h2>
+					<div class="controls">
+						<div class="search-container">
+							<span class="search-icon material-symbols-rounded">search</span>
+							<input type="text" class="search-box" placeholder="Buscar pedidos..." />
+						</div>
+						<select class="filter-select">
+							<option value="all">Todos los estados</option>
+							<option value="pendiente">Pendientes</option>
+							<option value="preparacion">En preparación</option>
+							<option value="listo">Listos</option>
+						</select>
+						<button class="btn-secondary">
+							<span class="material-symbols-rounded">filter_list</span>
+							Filtros
+						</button>
+					</div>
+				</div>
+
+				<div class="table-container">
+					<table id="pedidos-table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Cliente</th>
+								<th>Productos</th>
+								<th>Total</th>
+								<th>Estado</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody id="pedidos-table-body">
+							<!-- Los pedidos se cargarán aquí dinámicamente -->
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+
+		<script src="/JScripts/AdminPedidos.js"></script>
+	</body>
+</html>

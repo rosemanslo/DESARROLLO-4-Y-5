@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/GestionMenu.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+		<title>Gestión del Menú</title>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Gestión de Menú</h1>
+				<p class="subtitle">Agrega, edita o elimina productos del menú</p>
+			</header>
+
+			<div class="content">
+				<section class="form-section">
+					<h2 id="form-title">Agregar Producto</h2>
+					<form id="product-form">
+						<input type="hidden" id="product-id" />
+
+						<div class="form-group">
+							<label for="product-name">Nombre del Producto</label>
+							<input type="text" id="product-name" required />
+						</div>
+
+						<div class="form-group">
+							<label for="product-description">Descripción</label>
+							<textarea id="product-description" required></textarea>
+						</div>
+
+						<div class="form-group">
+							<label for="product-price">Precio ($)</label>
+							<input type="number" id="product-price" step="0.01" min="0" required />
+						</div>
+
+						<div class="form-group">
+							<div class="checkbox-group">
+								<input type="checkbox" id="product-availability" checked />
+								<label for="product-availability">Disponible</label>
+							</div>
+						</div>
+
+						<div class="action-buttons">
+							<button type="submit" class="btn btn-primary" id="submit-btn">Agregar Producto</button>
+							<button type="button" class="btn btn-secondary" id="cancel-btn" style="display: none">Cancelar</button>
+						</div>
+					</form>
+				</section>
+
+				<section class="menu-section">
+					<h2>Productos del Menú</h2>
+					<div class="product-list" id="product-list">
+						<!-- Los productos se cargarán aquí dinámicamente -->
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="notification" id="notification"></div>
+	</body>
+	<script src="/JScripts/GestionMenu.js"></script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/Home.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<title>Home - Estructura</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="logo-container">
+				<h1 class="logo">PLATAFORMA</h1>
+			</div>
+		</header>
+
+		<!-- Contenedor principal -->
+		<main class="main-container">
+			<!-- Columna izquierda: Contenido principal -->
+			<div class="left-column">
+				<!-- Tarjeta: Juego reciente -->
+				<section class="card">
+					<div class="card-header">
+						<h2 class="card-title">JUGADOS RECIENTEMENTE</h2>
+					</div>
+					<div class="card-content">
+						<article class="recent-game-card">
+							<div class="game-image-container">
+								<div class="game-image-placeholder"></div>
+							</div>
+							<div class="game-info-container">
+								<h3 class="game-name"></h3>
+								<div class="game-stats">
+									<span class="time-played"></span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+
+				<!-- Tarjeta: Noticias -->
+				<section class="card">
+					<div class="card-header">
+						<h2 class="card-title">NOTICIAS</h2>
+					</div>
+					<div class="card-content">
+						<div class="news-container">
+							<article class="news-card">
+								<div class="news-meta">
+									<span class="news-category"></span>
+									<time class="news-date"></time>
+								</div>
+								<h3 class="news-title"></h3>
+							</article>
+
+							<article class="news-card">
+								<div class="news-meta">
+									<span class="news-category"></span>
+									<time class="news-date"></time>
+								</div>
+								<h3 class="news-title"></h3>
+							</article>
+
+							<article class="news-card">
+								<div class="news-meta">
+									<span class="news-category"></span>
+									<time class="news-date"></time>
+								</div>
+								<h3 class="news-title"></h3>
+							</article>
+
+							<article class="news-card">
+								<div class="news-meta">
+									<span class="news-category"></span>
+									<time class="news-date"></time>
+								</div>
+								<h3 class="news-title"></h3>
+							</article>
+
+							<article class="news-card">
+								<div class="news-meta">
+									<span class="news-category"></span>
+									<time class="news-date"></time>
+								</div>
+								<h3 class="news-title"></h3>
+							</article>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- Columna derecha: Menú y sidebar -->
+			<aside class="right-column">
+				<!-- Tarjeta: Menú -->
+				<section class="card">
+					<div class="card-header">
+						<h2 class="card-title">MENÚ</h2>
+					</div>
+					<div class="card-content">
+						<nav class="menu-container">
+							<button class="menu-item">Menú</button>
+							<button class="menu-item">Perfil</button>
+							<button class="menu-item">Administración de Perfiles</button>
+							<button class="menu-item">Gestion de Menú</button>
+							<button class="menu-item">Gestion Pedidos</button>
+							<button class="menu-item">Gestion De Reportes</button>
+						</nav>
+					</div>
+				</section>
+
+				<!-- Tarjeta: Recomendado -->
+				<section class="card">
+					<div class="card-header">
+						<h2 class="card-title"></h2>
+					</div>
+					<div class="card-content">
+						<article class="featured-card">
+							<div class="featured-image-container">
+								<div class="featured-image-placeholder"></div>
+							</div>
+							<div class="featured-info-container">
+								<h3 class="featured-title"></h3>
+							</div>
+						</article>
+					</div>
+				</section>
+
+				<!-- Tarjeta: Opciones -->
+				<section class="card">
+					<div class="card-header">
+						<h2 class="card-title">OPCIONES</h2>
+					</div>
+					<div class="card-content">
+						<div class="options-container">
+							<button class="option-item"></button>
+							<button class="option-item"></button>
+							<button class="option-item"></button>
+						</div>
+					</div>
+				</section>
+			</aside>
+		</main>
+
+		<!-- Controles de navegación -->
+		<footer class="navigation-footer">
+			<div class="nav-controls">
+				<button class="nav-button back-button">ATRÁS</button>
+				<button class="nav-button select-button">SELECCIONAR</button>
+			</div>
+		</footer>
+
+		<script src="/JScripts/Home.js"></script>
+	</body>
+</html>

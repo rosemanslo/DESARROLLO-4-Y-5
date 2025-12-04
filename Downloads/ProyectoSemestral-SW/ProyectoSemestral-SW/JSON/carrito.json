@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "nombre": "Prueba",
+        "descripcion": "Desc. Prueba",
+        "precio": 0,
+        "cantidad": 3,
+        "fechaAgregado": "2025-11-27T00:23:36.481Z",
+        "fechaActualizado": "2025-12-04T00:47:01.417Z"
+    },
+    {
+        "id": 2,
+        "nombre": "Prueba",
+        "descripcion": "Desc. Prueba",
+        "precio": 0,
+        "cantidad": 2,
+        "fechaAgregado": "2025-11-27T00:30:54.142Z",
+        "fechaActualizado": "2025-11-27T12:06:04.673Z"
+    },
+    {
+        "id": 6,
+        "nombre": "prueba",
+        "descripcion": "abcdefg",
+        "precio": 0,
+        "cantidad": 1,
+        "fechaAgregado": "2025-12-04T01:15:54.426Z"
+    }
+]

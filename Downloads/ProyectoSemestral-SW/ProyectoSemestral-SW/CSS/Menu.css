@@ -1,0 +1,503 @@
+/* ========== ROOT VARIABLES ========== */
+:root {
+	/* Variables del Body */
+	--color-primary: rgba(255, 75, 62, 0.9);
+	--color-secondary: rgba(255, 140, 66, 0.9);
+	--color-accent: rgba(255, 140, 66, 0.9);
+	--color-accent-2: rgba(255, 75, 62, 0.9);
+	--bg-light: #f8f9fa;
+	--bg-gradient-back: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	--text-dark: #333;
+	--text-medium: #555;
+	--text-light: #666;
+	--border-color: #e0e0e0;
+	--shadow-soft: 0 4px 8px rgba(0, 0, 0, 0.1);
+	--shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+	--available-bg: #e8f5e8;
+	--available-color: #2e7d32;
+	--not-available-bg: #ffebee;
+	--not-available-color: #c62828;
+	--btn-green: #28a745;
+	--btn-green-hover: #218838;
+	--btn-info: #17a2b8;
+	--btn-info-hover: #138496;
+	--btn-gray: #6c757d;
+	--btn-gray-hover: #5a6268;
+	--transition-fast: 0.3s;
+	--transition-slow: 0.8s;
+	--radius: 20px; /* Aumentado de 12px a 20px */
+	--small-radius: 10px; /* Aumentado de 6px a 10px */
+	--card-height: 400px;
+	--danger-color: #dc3545;
+}
+
+/* ========== BODY ========== */
+body {
+	background-color: var(--bg-light);
+	margin: 0;
+	padding: 0;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	color: var(--text-dark);
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+	background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+	padding: 15px 0;
+	box-shadow: var(--shadow-soft);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.nav-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.nav-links {
+	display: flex;
+	gap: 30px;
+}
+
+.nav-links a {
+	color: white;
+	text-decoration: none;
+	font-weight: 500;
+	padding: 8px 16px;
+	border-radius: var(--small-radius);
+	transition: background-color var(--transition-fast);
+}
+
+.nav-links a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar {
+	padding: 10px 15px;
+	border: none;
+	border-radius: var(--small-radius) 0 0 var(--small-radius);
+	width: 250px;
+	font-size: 0.95em;
+	outline: none;
+}
+
+.search-btn {
+	background: var(--btn-info);
+	color: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 0 var(--small-radius) var(--small-radius) 0;
+	cursor: pointer;
+	transition: background-color var(--transition-fast);
+}
+
+.search-btn:hover {
+	background: var(--btn-info-hover);
+}
+
+/* ========== CONTENEDOR 3D ========== */
+.card-container {
+	perspective: 1000px;
+	height: var(--card-height);
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	border-radius: var(--radius);
+	overflow: hidden; /* Asegura que el contenido respete el border-radius */
+}
+
+.card-container:hover .card-front:not(.flipped) {
+	box-shadow: var(--shadow-hover);
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform var(--transition-slow);
+	transform-style: preserve-3d;
+	border-radius: var(--radius); /* Añadido border-radius */
+}
+
+/* Efecto de elevación si está volteada */
+.card-container:has(.card-inner[style*="rotateY(180deg)"]) {
+	transform: translateY(-5px);
+	z-index: 10;
+}
+
+.card-inner[style*="rotateY(180deg)"] {
+	z-index: 10;
+}
+
+/* ========== CARAS DE LA CARTA ========== */
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	border-radius: var(--radius); /* Aumentado border-radius */
+	box-shadow: var(--shadow-soft);
+	background: white;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* Asegura que el contenido respete el border-radius */
+}
+
+.card-back {
+	transform: rotateY(180deg);
+	background: var(--bg-gradient-back);
+}
+
+.card-front {
+	border: 1px solid var(--border-color);
+}
+
+/* ========== ENCABEZADOS ========== */
+.card-header {
+	background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+	color: white;
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 70px;
+	border-radius: var(--radius) var(--radius) 0 0; /* Bordes redondeados solo arriba */
+}
+
+.back-header {
+	background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-2) 100%);
+	flex-wrap: wrap;
+	gap: 10px;
+	border-radius: var(--radius) var(--radius) 0 0; /* Bordes redondeados solo arriba */
+}
+
+.product-name {
+	margin: 0;
+	font-size: 1.3em;
+	font-weight: 600;
+	flex: 1;
+}
+
+.product-id {
+	background: rgba(255, 255, 255, 0.2);
+	padding: 4px 8px;
+	border-radius: 20px; /* Más redondeado */
+	font-size: 0.8em;
+	font-weight: 500;
+}
+
+/* ========== BOTONES MEJORADOS ========== */
+.order-btn-header {
+	background: var(--btn-green);
+	color: white;
+	border: none;
+	padding: 8px 12px;
+	border-radius: var(--small-radius);
+	font-size: 0.85em;
+	font-weight: 500;
+	transition: all var(--transition-fast);
+	cursor: pointer;
+	min-width: 140px;
+}
+
+.order-btn-header:hover:not(:disabled) {
+	background: var(--btn-green-hover);
+	transform: translateY(-1px);
+}
+
+.order-btn-header:disabled {
+	background: var(--btn-gray);
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+.back-btn {
+	background: var(--btn-info);
+	color: white;
+	border: none;
+	padding: 10px 16px;
+	border-radius: var(--small-radius);
+	font-size: 0.95em;
+	font-weight: 500;
+	transition: all var(--transition-fast);
+	cursor: pointer;
+	width: 100%;
+}
+
+.back-btn:hover {
+	background: var(--btn-info-hover);
+	transform: translateY(-1px);
+}
+
+/* ========== IMÁGENES ========== */
+.card-image {
+	height: 160px;
+	background: var(--bg-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	border-radius: 0; /* Sin bordes redondeados para la imagen */
+}
+
+.card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-placeholder {
+	font-size: 2em;
+	color: #ccc;
+}
+
+/* ========== CUERPO DE TARJETA ========== */
+.card-body {
+	padding: 20px;
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.back-body {
+	text-align: left;
+	padding: 20px;
+	flex-grow: 1;
+}
+
+.back-body h4 {
+	color: var(--text-dark);
+	margin: 0 0 15px 0;
+	font-size: 1.2em;
+	border-bottom: 2px solid var(--color-primary);
+	padding-bottom: 8px;
+}
+
+.full-description,
+.product-preview {
+	color: var(--text-medium);
+	line-height: 1.6;
+	margin: 0 0 20px 0;
+	font-size: 0.95em;
+}
+
+.product-details {
+	background: rgba(255, 255, 255, 0.7);
+	padding: 15px;
+	border-radius: var(--small-radius); /* Más redondeado */
+	border: 1px solid var(--border-color);
+}
+
+.detail-item {
+	margin: 8px 0;
+	font-size: 0.9em;
+}
+
+/* ========== PIE DE TARJETA ========== */
+.card-footer {
+	padding: 15px 20px;
+	background: var(--bg-light);
+	border-top: 1px solid #e9ecef;
+	border-radius: 0 0 var(--radius) var(--radius); /* Bordes redondeados solo abajo */
+}
+
+.back-footer {
+	background: rgba(248, 249, 250, 0.8);
+	padding: 15px 20px;
+	border-radius: 0 0 var(--radius) var(--radius); /* Bordes redondeados solo abajo */
+}
+
+/* ========== BOTONES DEL FRENTE ========== */
+.button-group {
+	display: flex;
+	gap: 10px;
+	justify-content: space-between;
+}
+
+.desc-btn,
+.order-btn {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.desc-btn {
+	background: var(--btn-info);
+	color: white;
+	border: none;
+	padding: 10px 12px;
+	border-radius: var(--small-radius);
+	font-size: 0.9em;
+	font-weight: 500;
+	transition: all var(--transition-fast);
+	flex: 1;
+}
+
+.desc-btn:hover {
+	background: var(--btn-info-hover);
+	transform: translateY(-1px);
+}
+
+.order-btn {
+	background: var(--btn-green);
+	color: white;
+	border: none;
+	padding: 10px 12px;
+	border-radius: var(--small-radius);
+	font-size: 0.85em;
+	font-weight: 500;
+	transition: all var(--transition-fast);
+	flex: 1;
+}
+
+.order-btn:hover:not(:disabled) {
+	background: var(--btn-green-hover);
+	transform: translateY(-1px);
+}
+
+.order-btn:disabled {
+	background: var(--btn-gray);
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+/* ========== DISPONIBILIDAD ========== */
+.availability {
+	padding: 6px 12px;
+	border-radius: 20px; /* Más redondeado */
+	font-size: 0.85em;
+	font-weight: 600;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.availability.disponible {
+	background-color: var(--available-bg);
+	color: var(--available-color);
+}
+
+.availability.no-disponible {
+	background-color: var(--not-available-bg);
+	color: var(--not-available-color);
+}
+
+/* ========== CONTENIDO PRINCIPAL ========== */
+main {
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 0 20px;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 30px;
+	color: var(--text-dark);
+}
+
+#lista {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 20px;
+	list-style: none;
+	padding: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+	.nav-container {
+		flex-direction: column;
+		gap: 15px;
+	}
+
+	.nav-links {
+		gap: 15px;
+	}
+
+	.search-bar {
+		width: 200px;
+	}
+
+	.card-container {
+		height: 380px;
+	}
+
+	#lista {
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		gap: 15px;
+		padding: 15px;
+	}
+
+	.card-header {
+		padding: 12px 15px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+	}
+
+	.back-header {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.order-btn-header {
+		width: 100%;
+		min-width: auto;
+	}
+
+	.button-group {
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
+@media (max-width: 480px) {
+	.nav-links {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.search-bar {
+		width: 150px;
+	}
+
+	.card-container {
+		height: 350px;
+	}
+
+	#lista {
+		grid-template-columns: 1fr;
+		gap: 12px;
+		padding: 10px;
+	}
+
+	.back-btn {
+		padding: 12px 16px;
+		font-size: 1em;
+	}
+}
+
+.cart-counter {
+	background: var(--danger-color);
+	color: white;
+	border-radius: 50%;
+	padding: 2px 6px;
+	font-size: 0.7em;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	min-width: 18px;
+	text-align: center;
+	display: none;
+}

@@ -1,0 +1,150 @@
+/* Asume que tienes un archivo Componentes.css que define variables como --color-rojo, --color-verde, etc. */
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f0f2f5;
+    color: #333;
+    padding-top: 20px;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: var(--color-principal, #2c3e50);
+    margin-bottom: 30px;
+}
+
+/* --- Estilos para el Rastreador de Estado (Círculos) --- */
+
+.status-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 30px 20px;
+    margin: 40px 0;
+}
+
+/* Línea de fondo (Gris) */
+.status-tracker::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
+    height: 4px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+/* Línea de progreso (Color dinámico, controlado por JS) */
+.tracker-line {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    height: 4px;
+    width: 0%; /* Controlado por JS */
+    transition: width 0.6s ease-in-out, background-color 0.3s;
+    transform: translateY(-50%);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+/* Clases de colores para la línea de progreso */
+.bg-red { background-color: var(--color-rojo, #e74c3c); }
+.bg-yellow { background-color: var(--color-amarillo, #f39c12); }
+.bg-green { background-color: var(--color-verde, #2ecc71); }
+
+
+/* Estilo de cada paso */
+.step {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    cursor: default;
+    color: #95a5a6; /* Color inactivo */
+    width: 30%;
+}
+
+.step .material-symbols-rounded {
+    background-color: #ffffff;
+    border: 3px solid #e0e0e0; /* Borde gris inactivo */
+    color: #95a5a6;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 28px;
+    margin-bottom: 5px;
+    transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+}
+
+/* Pasos completados */
+.step.active .material-symbols-rounded {
+    border-color: var(--color-verde, #2ecc71);
+    color: #ffffff;
+    background-color: var(--color-verde, #2ecc71);
+}
+
+/* Paso actual */
+.step.current .material-symbols-rounded {
+    border-color: var(--color-amarillo, #f39c12); 
+    color: var(--color-texto-principal, #333);
+    background-color: var(--color-amarillo, #f39c12);
+    /* Animación de latido */
+    animation: pulse 1s infinite alternate; 
+}
+
+.step p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+#current-status-text {
+    margin: 40px 0 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+}
+
+/* Animación de latido para el estado actual */
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* --- Estilos para el Mapa SVG y el Carro de Animación --- */
+
+.delivery-map-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Ajusta el tamaño del mapa */
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ecf0f1;
+}
+
+.car {
+    position: absolute;
+    width: 25px; 
+    height: 25px; 
+    left: -12.5px; /* Centrar el carro en el punto de inicio */
+    top: -12.5px; 
+    color: var(--color-repartidor, #e74c3c); /* Color del icono del carro */
+    font-size: 25px; 
+    z-index: 100;
+    text-align: center;
+    line-height: 25px;
+    display: none; /* Oculto por defecto, se muestra en JS cuando está 'LISTO' */
+}

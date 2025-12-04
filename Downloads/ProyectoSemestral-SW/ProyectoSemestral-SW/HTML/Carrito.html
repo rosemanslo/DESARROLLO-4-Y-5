@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/CSS/Carrito.css" />
+		<link rel="stylesheet" href="/CSS/Extras/Animaciones.css" />
+		<title>Carrito de Compras</title>
+	</head>
+	<body>
+		<!-- Barra de navegación -->
+		<nav class="navbar">
+			<div class="nav-container">
+				<div class="nav-links">
+					<a href="/HTML/Menu.html">Menú</a>
+					<a href="/HTML/ClientePedidos.html">Pedidos</a>
+					<a href="/HTML/Carrito.html" class="active">
+						🛒 Carrito
+						<span id="contador-carrito" class="cart-counter">0</span>
+					</a>
+				</div>
+				<div class="search-container">
+					<input type="text" class="search-bar" placeholder="Buscar productos..." />
+					<button class="search-btn">Buscar</button>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Contenido principal del carrito -->
+		<main class="carrito-container">
+			<div class="carrito-header">
+				<h1>🛒 Tu Carrito de Compras</h1>
+				<p id="resumen-carrito">0 productos en el carrito</p>
+			</div>
+
+			<div class="carrito-content">
+				<!-- Sección de productos del carrito -->
+				<section class="productos-section">
+					<h2>Productos en el Carrito</h2>
+
+					<div id="lista-carrito" class="lista-carrito">
+						<!-- Los productos del carrito se cargarán aquí dinámicamente -->
+						<div class="carrito-vacio" id="carrito-vacio">
+							<div class="empty-cart-icon">🛒</div>
+							<h3>Tu carrito está vacío</h3>
+							<p>Agrega algunos productos del menú para continuar</p>
+							<a href="/index.html" class="btn-volver-menu">Ir al Menú</a>
+						</div>
+					</div>
+				</section>
+
+				<!-- Sección de resumen y checkout -->
+				<aside class="resumen-section">
+					<div class="resumen-card">
+						<h3>Resumen del Pedido</h3>
+
+						<div class="resumen-detalles">
+							<div class="resumen-item">
+								<span>Subtotal:</span>
+								<span id="subtotal">$0.00</span>
+							</div>
+							<div class="resumen-item">
+								<span>Impuestos (0%):</span>
+								<span id="impuestos">$0.00</span>
+							</div>
+							<div class="resumen-item total">
+								<span><strong>Total:</strong></span>
+								<span id="total"><strong>$0.00</strong></span>
+							</div>
+						</div>
+
+						<div class="acciones-carrito">
+							<button id="btn-limpiar-carrito" class="btn-limpiar">🗑️ Limpiar Carrito</button>
+							<button id="btn-realizar-pedido" class="btn-pedido" disabled>✅ Realizar Pedido</button>
+						</div>
+
+						<div class="info-adicional">
+							<p>📞 <strong>Información de contacto</strong></p>
+							<p>Teléfono: +506 1234-5678</p>
+							<p>Email: info@restaurante.com</p>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</main>
+
+		<!-- Modal para confirmar eliminación -->
+		<div id="modal-confirmacion" class="modal">
+			<div class="modal-content">
+				<h3>¿Estás seguro?</h3>
+				<p>¿Quieres eliminar todos los productos del carrito?</p>
+				<div class="modal-buttons">
+					<button id="btn-cancelar" class="btn-cancelar">Cancelar</button>
+					<button id="btn-confirmar-limpiar" class="btn-confirmar">Sí, limpiar</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- Notificaciones -->
+		<div id="notificaciones"></div>
+
+		<script src="/JScripts/Carrito.js"></script>
+	</body>
+</html>

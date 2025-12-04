@@ -1,0 +1,179 @@
+/* Importa tus variables y componentes */
+@import url(/CSS/Extras/Componentes.css);
+
+/* Importa la fuente base */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --color-header-bg: #34495e; /* Azul oscuro/gris */
+    --color-fondo-app: #ecf0f1; /* Fondo claro */
+    --color-card-bg: #ffffff;
+    --color-listo: #2ecc71; /* Verde brillante */
+    --color-curso: #f39c12; /* Naranja/Amarillo */
+    --color-texto-principal: #2c3e50;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--fuente-base);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-app);
+    min-height: 100vh;
+}
+
+/* ================= Header ================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--color-header-bg);
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logout-button {
+    color: white;
+    font-size: 1.5rem;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ================= Contenido Principal ================= */
+.main-content {
+    padding: 20px 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-texto-principal);
+    margin-bottom: 30px;
+}
+
+/* ================= Lista de Pedidos (Grid) ================= */
+.pedidos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* ================= Tarjeta de Pedido (Card) ================= */
+.pedido-card {
+    background-color: var(--color-card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.pedido-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título de la tarjeta */
+.card-header {
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+/* Colores de estado en la tarjeta */
+.status-pendiente, .status-preparando {
+    background-color: var(--color-curso);
+}
+
+/* Contenido de los productos */
+.card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.card-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.card-body li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    color: var(--color-texto-principal);
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-body li:last-child {
+    border-bottom: none;
+}
+
+/* Total y Notas */
+.card-footer {
+    padding: 15px 20px;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-footer strong {
+    font-weight: 700;
+    color: var(--color-texto-principal);
+}
+
+/* Botón de acción principal */
+.btn-listo {
+    background-color: var(--color-listo);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-listo:hover {
+    background-color: #27ae60;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#no-orders-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #95a5a6;
+    margin-top: 50px;
+}

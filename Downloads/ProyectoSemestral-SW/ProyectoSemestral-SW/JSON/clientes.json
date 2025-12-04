@@ -1,0 +1,12 @@
+[
+	{
+		"ID_Usuario": 2,
+		"Nombre_Usuario": "Eduardo González",
+		"Corre_UTP": "eduard.gonzalez17@utp.ac.pa"
+	},
+	{
+		"ID_Usuario": 0,
+		"Nombre_Usuario": "Prueba",
+		"Corre_UTP": "prueba.prueba@utp.ac.pa"
+	}
+]
