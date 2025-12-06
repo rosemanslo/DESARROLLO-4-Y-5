@@ -8,146 +8,104 @@
 		<title>Home - Estructura</title>
 	</head>
 	<body>
-		<!-- Header -->
-		<header class="header">
-			<div class="logo-container">
-				<h1 class="logo">PLATAFORMA</h1>
+		 <!-- Header con logo, menú de navegación de la aplicación, redes sociales-->
+    <header class="header">
+        <img src="/Img/LaParadaLogo.png" alt="Logo de La Parada UTP" class="logo" />
+			<h1> La parada UTP</h1>
+			<nav>
+				<ul>
+					<li><a href="/HTML/Home.html">Home</a></li>
+                    <li><a href="/HTML/Carrito.html">Carrito</a></li>
+                    <li><a href="/HTML/ClientePedidos.html">Pedidos</a></li>
+                    <li><a href="/HTML/Menu.html">Menú</a></li>
+                    <li><a href="/HTML/AdminPedidos.html">Administrar Carrito</a></li>
+                    <li><a href="/HTML/GestionMenu.html">Gestionar Menú</a></li>
+                    <li><a href="/HTML/SobreNosotros.html">Sobre Nosotros</a></li>
+				</ul>
+			</nav>
+			<div class="bloque-redes">
+				<h2> Siguénos en nuestras redes sociales</h2>
+				<ul>
+					<li><a href= "https://www.instagram.com/laparadautp?igsh=ZG5ldTZmNHZrN3Rq">Instagram</a></li>
+					<li><a href= "https://www.tiktok.com/%40laparadautp?_t=ZM-8v7lS5L1fHS&_r=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAOhSpdleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafTpXMmO5Av98qvsSu_lvl90fyWhnFK2q_P4DU4bR_I7gAk0Poef656iTun9g_aem_4bvnX0ZGfb2vT6fdTEZrFg"
+						>TikTok</a></li>
+						<li><a href="https://www.google.com" target="_blank">🔍 Buscar en Google</a></li>
+
+				</ul>
 			</div>
 		</header>
 
-		<!-- Contenedor principal -->
-		<main class="main-container">
-			<!-- Columna izquierda: Contenido principal -->
-			<div class="left-column">
-				<!-- Tarjeta: Juego reciente -->
-				<section class="card">
-					<div class="card-header">
-						<h2 class="card-title">JUGADOS RECIENTEMENTE</h2>
-					</div>
-					<div class="card-content">
-						<article class="recent-game-card">
-							<div class="game-image-container">
-								<div class="game-image-placeholder"></div>
-							</div>
-							<div class="game-info-container">
-								<h3 class="game-name"></h3>
-								<div class="game-stats">
-									<span class="time-played"></span>
-								</div>
-							</div>
-						</article>
-					</div>
-				</section>
 
-				<!-- Tarjeta: Noticias -->
-				<section class="card">
-					<div class="card-header">
-						<h2 class="card-title">NOTICIAS</h2>
-					</div>
-					<div class="card-content">
-						<div class="news-container">
-							<article class="news-card">
-								<div class="news-meta">
-									<span class="news-category"></span>
-									<time class="news-date"></time>
-								</div>
-								<h3 class="news-title"></h3>
-							</article>
+    <!--SECCIÓN DE NOTICIAS-->
+    <main class="contenedor-noticias">
 
-							<article class="news-card">
-								<div class="news-meta">
-									<span class="news-category"></span>
-									<time class="news-date"></time>
-								</div>
-								<h3 class="news-title"></h3>
-							</article>
+        <h1 class="titulo-noticia">Noticias</h1>
 
-							<article class="news-card">
-								<div class="news-meta">
-									<span class="news-category"></span>
-									<time class="news-date"></time>
-								</div>
-								<h3 class="news-title"></h3>
-							</article>
+        <!--NOTICIA 1-->
+        <article class="noticia">
+            <h2>Apertura de La Parada UTP</h2>
+            <p class="fecha">Publicado el: 15 de marzo 2024</p>
+            <img src="/Img/foodtruckfoto.jpg" alt="La Parada UTP foodtruck" class="foto-noticias" />
+            <p>
+            Todo comenzó con la inauguración del primer Foodtruck de la UTP, pensado para ofrecer
+        	alimentos cuando cierran las cafeterías. El proyecto nació de la necesidad de brindar
+        	opciones rápidas y accesibles para los estudiantes. Desde entonces, se ha convertido en
+        	un punto de encuentro dentro del campus para disfrutar de comida fresca y deliciosa.
+            </p>
+            <a href="https://utp.ac.pa/rector-inaugura-nuevo-servicio-para-estudiantes-de-la-utp" target="_blank">
+                Leer noticia completa
+            </a>
+        </article>
 
-							<article class="news-card">
-								<div class="news-meta">
-									<span class="news-category"></span>
-									<time class="news-date"></time>
-								</div>
-								<h3 class="news-title"></h3>
-							</article>
 
-							<article class="news-card">
-								<div class="news-meta">
-									<span class="news-category"></span>
-									<time class="news-date"></time>
-								</div>
-								<h3 class="news-title"></h3>
-							</article>
-						</div>
-					</div>
-				</section>
-			</div>
+        <!--NOTICIA 2-->
+        <article class="noticia">
+            <h2>Beneficios de Consumir Carne de Cerdo</h2>
+            <p class="fecha">Publicado el: 15 de julio 2019</p>
+            <img src="/Img/cerdito.jpg" alt="Cerdito Foto" class="foto-noticias" />
+            <p>
+                En La Parada UTP ofrecemos deliciosos platillos con carne de cerdo, una fuente rica en proteínas,
+        		vitaminas B y minerales como fósforo, hierro y zinc. Esta carne aporta energía y nutrientes
+        		importantes para mantener una dieta equilibrada. Una opción nutritiva, práctica y sabrosa
+        		para los estudiantes que buscan calidad en su alimentación dentro del campus.
+            </p>
+            <a href="https://comecarne.org/las-ventajas-de-consumir-carne-de-cerdo/" target="_blank">
+                Leer noticia completa
+            </a>
+        </article>
 
-			<!-- Columna derecha: Menú y sidebar -->
-			<aside class="right-column">
-				<!-- Tarjeta: Menú -->
-				<section class="card">
-					<div class="card-header">
-						<h2 class="card-title">MENÚ</h2>
-					</div>
-					<div class="card-content">
-						<nav class="menu-container">
-							<button class="menu-item">Menú</button>
-							<button class="menu-item">Perfil</button>
-							<button class="menu-item">Administración de Perfiles</button>
-							<button class="menu-item">Gestion de Menú</button>
-							<button class="menu-item">Gestion Pedidos</button>
-							<button class="menu-item">Gestion De Reportes</button>
-						</nav>
-					</div>
-				</section>
 
-				<!-- Tarjeta: Recomendado -->
-				<section class="card">
-					<div class="card-header">
-						<h2 class="card-title"></h2>
-					</div>
-					<div class="card-content">
-						<article class="featured-card">
-							<div class="featured-image-container">
-								<div class="featured-image-placeholder"></div>
-							</div>
-							<div class="featured-info-container">
-								<h3 class="featured-title"></h3>
-							</div>
-						</article>
-					</div>
-				</section>
+        <!--NOTICIA 3 VIDEO -->
+        <article class="noticia video">
+            <h2>Historia de los Nachos</h2>
+            <p class="fecha">Publicado el: 4 de noviembre 2015</p>
+			<p>
+                Este video muestra la historia de los nachos, un clásico que ahora forma parte del menú de La Parada UTP.
+        		Explica cómo surgieron y cómo se popularizaron a nivel mundial. Una manera sencilla de conocer
+        		un poco más sobre este alimento que muchos estudiantes disfrutan. Ideal para quienes quieren
+        		aprender algo nuevo mientras disfrutan de sus snacks favoritos.
+            </p>
+            <div class="video-contenedor">
+                <iframe 
+                    width="660" 
+                    height="415" 
+                    src="https://www.youtube.com/embed/BLrqdv3UNUA" 
+                    title="Video noticia"
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </article>
 
-				<!-- Tarjeta: Opciones -->
-				<section class="card">
-					<div class="card-header">
-						<h2 class="card-title">OPCIONES</h2>
-					</div>
-					<div class="card-content">
-						<div class="options-container">
-							<button class="option-item"></button>
-							<button class="option-item"></button>
-							<button class="option-item"></button>
-						</div>
-					</div>
-				</section>
-			</aside>
-		</main>
+    </main>
 
-		<!-- Controles de navegación -->
+		<!-- Footer de navegación -->
 		<footer class="navigation-footer">
-			<div class="nav-controls">
-				<button class="nav-button back-button">ATRÁS</button>
-				<button class="nav-button select-button">SELECCIONAR</button>
-			</div>
+			<p>© 2025 La Parada UTP. Todos los derechos reservados.</p>
+            <div class="nav-controls">
+            <button class="nav-button back-button">ATRÁS</button>
+            <button class="nav-button select-button">SELECCIONAR</button>
+            </div>
 		</footer>
 
 		<script src="/JScripts/Home.js"></script>
