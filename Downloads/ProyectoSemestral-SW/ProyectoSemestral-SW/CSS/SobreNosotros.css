@@ -1,0 +1,195 @@
+/* ================= Variables ================= */
+:root {
+    --color-primary: rgba(255, 75, 62, 0.9);
+    --color-secondary: rgba(255, 140, 66, 0.9);
+
+    --bg-light: #f8f9fa;
+    --text-dark: #333;
+    --text-medium: #555;
+
+    --shadow-soft: 0 4px 10px rgba(0,0,0,0.12);
+    --shadow-hover: 0 6px 14px rgba(0,0,0,0.18);
+
+    --radius: 20px;
+    --small-radius: 10px;
+
+    --btn-info: #17a2b8;
+    --btn-info-hover: #138496;
+
+    --danger-color: #dc3545;
+
+    /* Adaptación para el segundo CSS */
+    --color-contenedor-bg: rgba(255, 255, 255, 0.12);
+    --color-boton: var(--color-primary);
+    --color-boton-texto: #ffffff;
+    --color-link: #ffffff;
+    --fuente-base: "Montserrat", sans-serif;
+    --radio-contenedor: 30px;
+    --radio-boton: 10px;
+    --sombra-contenedor: var(--shadow-soft);
+}
+
+/* ================= GLOBAL ================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente-base);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+}
+
+/* ================= HEADER ================= */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    box-shadow: var(--shadow-soft);
+}
+
+.header .logo {
+    height: 70px;
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* NAV */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: var(--color-link);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 14px;
+    border-radius: var(--small-radius);
+}
+
+/* REDES */
+.bloque-redes {
+    text-align: right;
+}
+
+.bloque-redes h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bloque-redes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bloque-redes li a {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+.bloque-redes li a:hover {
+    color: #ffe6d9;
+}
+
+/* ================= TÍTULO ================= */
+.titulo-nosotros {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 40px;
+    color: white;
+}
+
+/* ================= SECCIÓN DE MIEMBROS ================= */
+.miembros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.miembro {
+    background: var(--color-contenedor-bg);
+    padding: 20px;
+    border-radius: var(--radio-contenedor);
+    box-shadow: var(--sombra-contenedor);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.miembro:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Foto */
+.foto-integrante {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.miembro h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.miembro p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.descripcion {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ================= FOOTER ================= */
+.navigation-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.nav-controls {
+    margin-top: 10px;
+}
+
+.nav-button {
+    background: var(--btn-info);
+    color: var(--color-boton-texto);
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radio-boton);
+    margin: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: var(--shadow-soft);
+}
+
+.nav-button:hover {
+    background: var(--btn-info-hover);
+    transform: translateY(-2px);
+}
